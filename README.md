@@ -25,20 +25,22 @@ This jammer works by sending a large number of packets across the 2.4 GHz band, 
 ⚙️ Wiring and Connections:
 
 Connect the two NRF24L01 modules to the ESP32 as follows:
-🔌 NRF1 Connections:
-NRF24L01	ESP32 Pin
-CE	D4
-CSN	D15
-SCK	D14
-MOSI	D13
-MISO	D12
-🔌 NRF2 Connections:
-NRF24L01	ESP32 Pin
-CE	D22
-CSN	D21
-SCK	D18
-MOSI	D23
-MISO	D19
+| NRF1 Pin | ESP32 Pin |
+| ------------ | --------- |
+| CE           | D4        |
+| CSN          | D15       |
+| SCK          | D14       |
+| MOSI         | D13       |
+| MISO         | D12       |
+
+| NRF2 Pin | ESP32 Pin |
+| ------------ | --------- |
+| CE           | D22       |
+| CSN          | D21       |
+| SCK          | D18       |
+| MOSI         | D23       |
+| MISO         | D19       |
+
 ⚠️ Note: Add a 10µF capacitor between VCC and GND on each NRF24L01 module to improve stability
 
 ====================================================
@@ -70,20 +72,20 @@ MISO	D19
 ⚙️ اتصالات و سیم‌کشی:
 
 اتصالات دو ماژول NRF24L01 به برد ESP32 به شکل زیر انجام می‌گیرد:
-🔌 اتصالات NRF1:
-پایه NRF24L01	پایه ESP32
-CE	D4
-CSN	D15
-SCK	D14
-MOSI	D13
-MISO	D12
-🔌 اتصالات NRF2:
-پایه NRF24L01	پایه ESP32
-CE	D22
-CSN	D21
-SCK	D18
-MOSI	D23
-MISO	D19
+| NRF1 Pin | ESP32 Pin |
+| ------------ | --------- |
+| CE           | D4        |
+| CSN          | D15       |
+| SCK          | D14       |
+| MOSI         | D13       |
+| MISO         | D12       |
 
-⚠️ نکته: برای پایداری ولتاژ ماژول‌ها، یک خازن ۱۰ میکروفاراد بین پایه‌های VCC و GND هر ماژول NRF24L01 قرار دهید.
+| NRF2 Pin | ESP32 Pin |
+| ------------ | --------- |
+| CE           | D22       |
+| CSN          | D21       |
+| SCK          | D18       |
+| MOSI         | D23       |
+| MISO         | D19       |
+
 
