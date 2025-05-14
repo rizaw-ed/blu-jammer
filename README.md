@@ -42,6 +42,8 @@ Connect the two NRF24L01 modules to the ESP32 as follows:
 | MISO         | D19       |
 
 ⚠️ Note: Add a 10µF capacitor between VCC and GND on each NRF24L01 module to improve stability
+====================================================
+![Preview](1.jpg)
 
 ====================================================
 
