@@ -1,0 +1,5 @@
+nrf1
+ce=d4,csn=d15,sck=d14,mosi=d13,misod12
+--------------
+nrf2
+ce=d22,csn=d21,sck=d18,mosi=d23,miso=d19
