@@ -8,17 +8,15 @@
 SPIClass *sp = nullptr;
 SPIClass *hp = nullptr;
 
-RF24 radio(4, 15, 16000000);   //HSPI CAN SET SPI SPEED TO 16000000 BY DEFAULT ITS 10000000
-RF24 radio1(22, 21, 16000000);  //VSPI CAN SET SPI SPEED TO 16000000 BY DEFAULT ITS 10000000
+RF24 radio(4, 15, 16000000);   //HSPI 
+RF24 radio1(22, 21, 16000000); //VSPI
 
 
-//HSPI=SCK = 14, MISO = 12, MOSI = 13, CS = 15 , CE = 4
-//VSPI=SCK = 18, MISO =19, MOSI = 23 ,CS =21 ,CE = 22
 
-unsigned int flag = 0;   //HSPI// Flag variable to keep track of direction
-unsigned int flagv = 0;  //VSPI// Flag variable to keep track of direction
-int ch = 45;    // Variable to store value of ch
-int ch1 = 45;   // Variable to store value of ch
+unsigned int flag = 0;   
+unsigned int flagv = 0;  
+int ch = 45;    
+int ch1 = 45;   
 
 ezButton toggleSwitch(33);
 
@@ -26,33 +24,33 @@ ezButton toggleSwitch(33);
 
 
 void two() {
-  if (flagv == 0) {  // If flag is 0, increment ch by 4 and ch1 by 1
+  if (flagv == 0) { 
 
     ch1 += 4;
-  } else {  // If flag is not 0, decrement ch by 4 and ch1 by 1
+  } else {  
 
     ch1 -= 4;
   }
 
-  if (flag == 0) {  // If flag is 0, increment ch by 4 and ch1 by 1
+  if (flag == 0) { 
     ch += 2;
 
-  } else {  // If flag is not 0, decrement ch by 4 and ch1 by 1
+  } else {  
     ch -= 2;
   }
 
-  // Check if ch1 is greater than 79 and flag is 0
+  
   if ((ch1 > 79) && (flagv == 0)) {
-    flagv = 1;                             // Set flag to 1 to change direction
-  } else if ((ch1 < 2) && (flagv == 1)) {  // Check if ch1 is less than 2 and flag is 1
-    flagv = 0;                             // Set flag to 0 to change direction
+    flagv = 1;                            
+  } else if ((ch1 < 2) && (flagv == 1)) {  
+    flagv = 0;                            
   }
 
-  // Check if ch is greater than 79 and flag is 0
+ 
   if ((ch > 79) && (flag == 0)) {
-    flag = 1;                            // Set flag to 1 to change direction
-  } else if ((ch < 2) && (flag == 1)) {  // Check if ch is less than 2 and flag is 1
-    flag = 0;                            // Set flag to 0 to change direction
+    flag = 1;                            
+  } else if ((ch < 2) && (flag == 1)) {  
+    flag = 0;                            
   }
   radio.setChannel(ch);
   radio1.setChannel(ch1);
