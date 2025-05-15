@@ -8,8 +8,8 @@
 SPIClass *sp = nullptr;
 SPIClass *hp = nullptr;
 
-RF24 radio(4, 15, 16000000);   //HSPI 
-RF24 radio1(22, 21, 16000000); //VSPI
+RF24 radio(4, 15, 16000000);   
+RF24 radio1(22, 21, 16000000); 
 
 
 
